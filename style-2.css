@@ -1,0 +1,828 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background:
+        linear-gradient(135deg, #eef2ff, #dbeafe, #f5f7ff);
+    background-attachment: fixed;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: #1565c0;
+    color: white;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+.hero {
+    padding: 100px 20px;
+    text-align: center;
+    color: white;
+
+    background: linear-gradient(135deg, #2563eb, #4f46e5, #06b6d4);
+
+    background-size: 300% 300%;
+    animation: gradientMove 8s ease infinite;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.hero h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+.hero button {
+    background: white;
+    color: #2563eb;
+    padding: 15px 35px;
+    border: none;
+    border-radius: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.hero button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .3);
+}
+
+
+.hero button:hover {
+    background: #e3f2fd;
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 60px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 280px;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card h2 {
+    color: #1565c0;
+    margin-bottom: 15px;
+}
+
+footer {
+    background: #1565c0;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.planner {
+    text-align: center;
+    padding: 60px;
+}
+
+.planner input {
+    padding: 12px;
+    margin: 10px;
+    width: 250px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.planner button {
+    padding: 12px 25px;
+    background: #1565c0;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#output {
+    margin-top: 20px;
+    font-size: 20px;
+    color: green;
+    font-weight: bold;
+}
+
+.dashboard {
+    background: #eef5ff;
+    padding: 60px;
+    text-align: center;
+}
+
+.dashboard-cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.dcard {
+    background: white;
+    width: 220px;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.dcard h2 {
+    color: #1565c0;
+    margin-bottom: 15px;
+}
+
+.career {
+    text-align: center;
+    padding: 60px;
+    background: #f7fbff;
+}
+
+.career select {
+    padding: 12px;
+    width: 250px;
+    border-radius: 8px;
+    margin: 15px;
+}
+
+.career button {
+    padding: 12px 25px;
+    background: #1565c0;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#careerOutput {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #1565c0;
+    font-weight: bold;
+}
+
+.study-planner {
+    text-align: center;
+    padding: 60px;
+    background: #ffffff;
+}
+
+.study-planner input {
+    padding: 12px;
+    width: 220px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.study-planner button {
+    padding: 12px 25px;
+    background: #1565c0;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+#studyOutput {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #1565c0;
+    font-weight: bold;
+}
+
+.chatbot {
+    padding: 60px;
+    text-align: center;
+    background: #eef7ff;
+}
+
+.chatbot input {
+    width: 320px;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.chatbot button {
+    padding: 12px 25px;
+    background: #1565c0;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+#answer {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #1565c0;
+    font-weight: bold;
+}
+
+.login {
+    text-align: center;
+    padding: 50px;
+    background: #ffffff;
+}
+
+.login input {
+    width: 280px;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid gray;
+}
+
+.login button {
+    padding: 12px 25px;
+    background: #1565c0;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+#welcome {
+    margin-top: 20px;
+    color: #1565c0;
+}
+
+.dark {
+    background: #121212;
+    color: white;
+}
+
+.dark header {
+    background: #000;
+}
+
+.dark .card,
+.dark .dcard {
+    background: #1f1f1f;
+    color: white;
+}
+
+.dark .planner,
+.dark .dashboard,
+.dark .career,
+.dark .study-planner,
+.dark .chatbot,
+.dark .login {
+    background: #181818;
+    color: white;
+}
+
+#taskList {
+    list-style: none;
+    margin-top: 20px;
+}
+
+#taskList li {
+    background: #1565c0;
+    color: white;
+    margin: 10px auto;
+    width: 350px;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 18px;
+}
+
+#taskList button {
+    margin-left: 15px;
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#taskList button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#taskList button:first-child {
+    background: green;
+    color: white;
+}
+
+#taskList button:last-child {
+    background: red;
+    color: white;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(135deg, #eef2ff, #dbeafe, #f8fafc);
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background: rgba(21, 101, 192, .95);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .15);
+}
+
+nav a {
+    transition: .3s;
+    padding: 8px 15px;
+    border-radius: 8px;
+}
+
+nav a:hover {
+    background: white;
+    color: #1565c0;
+}
+
+.hero {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: 60px;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 24px;
+}
+
+button {
+    transition: .4s;
+}
+
+button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .2);
+}
+
+.card,
+.dcard {
+    border-radius: 20px;
+    transition: .4s;
+}
+
+.card:hover,
+.dcard:hover {
+    transform: translateY(-12px) scale(1.03);
+}
+
+.planner,
+.dashboard,
+.career,
+.study-planner,
+.chatbot,
+.login {
+    margin: 40px auto;
+    width: 90%;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, .95);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .12);
+}
+
+input,
+select {
+    transition: .3s;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border: 2px solid #1565c0;
+    box-shadow: 0 0 15px rgba(21, 101, 192, .25);
+}
+
+#taskList li {
+    transition: .3s;
+}
+
+#taskList li:hover {
+    transform: scale(1.02);
+}
+
+footer {
+    margin-top: 60px;
+    font-size: 17px;
+}
+
+.hero {
+    animation: fadeIn 1s ease;
+}
+
+.card,
+.dcard {
+    animation: up .8s ease;
+}
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes up {
+
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.stats {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 40px;
+
+    padding: 60px;
+
+}
+
+.stat {
+
+    background: white;
+
+    padding: 35px;
+
+    width: 220px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 15px 30px rgba(0, 0, 0, .15);
+
+    transition: .4s;
+
+    text-align: center;
+
+}
+
+.stat:hover {
+
+    transform: translateY(-10px);
+
+}
+
+.contact {
+
+    padding: 70px;
+
+    text-align: center;
+
+    background: #eef5ff;
+
+}
+
+.contact input,
+
+.contact textarea {
+
+    width: 350px;
+
+    padding: 14px;
+
+    margin: 10px;
+
+    border-radius: 12px;
+
+    border: 1px solid #ddd;
+
+}
+
+.contact textarea {
+
+    height: 120px;
+
+}
+
+.hero {
+
+    animation: hero 1s ease;
+
+}
+
+@keyframes hero {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(-50px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+.floating-ai {
+
+    position: fixed;
+
+    bottom: 25px;
+
+    right: 25px;
+
+    width: 70px;
+
+    height: 70px;
+
+    border-radius: 50%;
+
+    background: linear-gradient(45deg, #2563eb, #7c3aed);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 34px;
+
+    color: white;
+
+    box-shadow: 0 15px 30px rgba(0, 0, 0, .3);
+
+    cursor: pointer;
+
+    animation: float 2s infinite;
+
+}
+
+@keyframes float {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+.chatbot {
+    width: 80%;
+    margin: 40px auto;
+    text-align: center;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.chatbot input {
+    width: 65%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.chatbot button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    background: #2563eb;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.chatbot button:hover {
+    background: #1d4ed8;
+}
+
+#answer {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f1f5f9;
+    border-radius: 12px;
+    font-size: 18px;
+}
+
+.hero h1 {
+    animation: fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contact {
+    padding: 80px 10%;
+    background: #f8fbff;
+    text-align: center;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: auto;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+}
+
+.contact button {
+    background: #2563eb;
+    color: white;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.contact button:hover {
+    background: #1d4ed8;
+    transform: scale(1.05);
+}
+
+.hero {
+    background: linear-gradient(135deg, #2563eb, #06b6d4);
+    color: white;
+    text-align: center;
+    padding: 120px 20px;
+}
+
+.hero h1 {
+    font-size: 55px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+.hero button {
+    background: white;
+    color: #2563eb;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.hero button:hover {
+    transform: scale(1.08);
+
+    .card {
+        background: white;
+        padding: 30px;
+        border-radius: 20px;
+        text-align: center;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, .15);
+        transition: .4s;
+    }
+
+    .card:hover {
+        transform: translateY(-10px);
+    }
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.hero button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .25);
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 50px 20px;
+}
+
+.stat-card {
+    width: 250px;
+    background: white;
+    border-radius: 20px;
+    text-align: center;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: 0.3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-10px);
+}
+
+.stat-card h2 {
+    font-size: 48px;
+    color: #2563eb;
+    margin: 0;
+}
+
+.stat-card p {
+    font-size: 20px;
+    color: #555;
+    margin-top: 10px;
+}
