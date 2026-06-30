@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Lifesaver AI</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+<h2>🚀 Student Lifesaver AI</h2>
+
+<nav>
+
+<a href="#home">🏠 Home</a>
+
+<a href="#planner">📋 Planner</a>
+
+<a href="#dashboard">📊 Dashboard</a>
+
+<a href="#career">🎯 Career</a>
+
+<a href="#study">📚 Study</a>
+
+<a href="#chatbot">🤖 AI</a>
+
+<a href="#contact">📞 Contact</a>
+
+</nav>
+
+<button onclick="darkMode()">🌙</button>
+
+</header>
+
+<section class="login">
+<h1>Welcome Student 👋</h1>
+<input type="text" id="username" placeholder="Enter Your Name">
+<button onclick="login()">Login</button>
+<h2 id="welcome">Welcome students</h2>
+</section>
+
+<section class="hero" id="home">
+
+<h1>Student Lifesaver AI</h1>
+
+<p class="tagline">
+🚀 Never Miss a Deadline Again
+</p>
+
+<p class="sub">
+
+AI Powered Productivity Companion
+
+</p>
+
+<button onclick="document.getElementById('planner').scrollIntoView({behavior:'smooth'})">
+
+Get Started
+
+</button>
+</section>
+
+<section class="stats">
+
+    <div class="stat-card">
+        <h2>500+</h2>
+        <p>Students</p>
+    </div>
+
+    <div class="stat-card">
+        <h2>1000+</h2>
+        <p>Tasks Managed</p>
+    </div>
+
+    <div class="stat-card">
+        <h2>95%</h2>
+        <p>Success Rate</p>
+    </div>
+
+</section>
+
+<section class="features">
+
+<div class="card">
+<h2>📅 Study Planner</h2>
+<p>Create smart study schedules.</p>
+</div>
+
+<div class="card">
+<h2>🤖 AI Chatbot</h2>
+<p>Ask doubts anytime using Gemini AI.</p>
+</div>
+
+<div class="card">
+<h2>✅ Task Manager</h2>
+<p>Never miss assignments again.</p>
+</div>
+
+</section>\
+
+<section class="planner" id="planner">
+
+<h1>AI Task Planner</h1>
+
+<p>Enter your task and deadline.</p>
+
+<input type="text" id="task" placeholder="Enter Task">
+
+<input type="date" id="date">
+
+<button onclick="addTask()">Add Task</button>
+
+<div id="output"></div>
+<h2>Your Tasks</h2>
+
+<ul id="taskList"></ul>
+
+</section>
+
+<section class="dashboard" id="dashboard">
+
+<h1>Your Dashboard</h1>
+<h2>Overall Progress</h2>
+
+<progress value="60" max="100"></progress>
+
+<p>60% Completed</p>
+
+<div class="dashboard-cards">
+
+<div class="dcard">
+<h2>📚 Total Tasks</h2>
+<h3 id="totalTasks">0</h3>
+</div>
+
+<div class="dcard">
+<h2>✅ Completed</h2>
+<h3 id="completedTasks">0</h3>
+</div>
+
+<div class="dcard">
+<h2>🔥 Productivity</h2>
+<h3>100%</h3>
+</div>
+
+<div class="dcard">
+<h2>"\23F0"</h2>
+<h3>Upcoming</h3>
+<p id="pending task">0</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="career" id="career">
+
+<h1>🎯 AI Career Guidance</h1>
+
+<select id="interest">
+<option value="">Select Your Interest</option>
+<option value="Programming">Programming</option>
+<option value="Web Development">Web Development</option>
+<option value="AI">Artificial Intelligence</option>
+<option value="Cyber Security">Cyber Security</option>
+<option value="Data Science">Data Science</option>
+</select>
+
+<button onclick="careerGuide()">Get Career Roadmap</button>
+
+<p id="careerOutput"></p>
+
+</section>
+
+<section class="study-planner" id="study">
+
+<h1>📅 Smart Study Planner</h1>
+
+<label>Exam Date:</label><br><br>
+
+<input type="date" id="examDate">
+
+<button onclick="studyPlan()">Generate Plan</button>
+
+<div id="studyOutput"></div>
+
+</section>
+
+<section class="chatbot" id="chatbot">
+
+<h1>🤖 AI Career Chatbot</h1>
+
+<input type="text" id="question" placeholder="Ask your question">
+
+<button onclick="chatbot()">Ask AI</button>
+
+<div id="answer"></div>
+
+</section>
+
+
+<section class="contact" id="contact">
+
+<h1>📞 Contact Us</h1>
+
+<input placeholder="Name">
+
+<input placeholder="Email">
+
+<textarea placeholder="Message"></textarea>
+
+<br><br>
+
+<button onclick="alert('Message Sent Successfully!')">
+Send Message
+</button>
+
+</section>
+
+<footer>
+<h2>
+🚀 Student Lifesaver AI
+</h2>
+<p>
+Made with ❤️ using HTML CSS JavaScript
+</p>
+<p>
+Vibe2Ship Hackathon 2026
+</p>
+
+</footer>
+<script src="script.js"></script>
+
+</body>
+</html>
